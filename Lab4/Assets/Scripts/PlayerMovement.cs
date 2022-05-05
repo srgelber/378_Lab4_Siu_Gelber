@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     public Rigidbody rb;
 
+    private bool facingRight = true;
+
     private CapsuleCollider cap;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,24 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("isJumping");
             rb.AddForce(new Vector2(rb.velocity.x,jump));
             
+        }
+
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (facingRight)
+            {
+                facingRight = false;
+                transform.Rotate(0f, 180f, 0f);
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (!facingRight)
+            {
+                transform.Rotate(0f, -180f, 0f);
+                facingRight = true;
+            }
         }
 
         if(Input.GetKeyDown(KeyCode.DownArrow)){
