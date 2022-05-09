@@ -12,7 +12,12 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     public Rigidbody rb;
 
+    private int jumpCount = 2;
+
     private bool facingRight = true;
+
+    public GameObject leftLight;
+    public GameObject rightLight;
 
     private CapsuleCollider cap;
     // Start is called before the first frame update
@@ -29,9 +34,10 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(speed*Move,rb.velocity.y);
 
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump") && jumpCount < 2){
             anim.SetTrigger("isJumping");
             rb.AddForce(new Vector2(rb.velocity.x,jump));
+            jumpCount++;
             
         }
 
@@ -39,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (facingRight)
             {
+                
                 facingRight = false;
                 transform.Rotate(0f, 180f, 0f);
             }
@@ -48,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!facingRight)
             {
+                
                 transform.Rotate(0f, -180f, 0f);
                 facingRight = true;
             }
@@ -64,9 +72,15 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        jumpCount = 0;
+        
     }
 }
