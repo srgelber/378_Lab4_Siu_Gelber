@@ -18,27 +18,18 @@ public class Lever : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            doorObject.Open();
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            inRange = true;
+            doorObject.Open();
+            Destroy(this);
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            inRange = false;
-        }
-    }
 }
 
 }
