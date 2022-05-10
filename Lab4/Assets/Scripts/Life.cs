@@ -47,9 +47,12 @@ public class Life : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Angel" && !invincibility)
+        if (other.tag == "Angel" || other.tag == "Boss")
         {
+            if (!invincibility)
+            {
             StartCoroutine(callChange());
+            }
         }
     }
 
