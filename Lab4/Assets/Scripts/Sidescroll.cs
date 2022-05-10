@@ -15,4 +15,12 @@ public class Sidescroll : MonoBehaviour
     {
         transform.position += (velocity * Time.deltaTime);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Boss Boundary")
+        {
+            this.velocity.x = 0f;
+        }
+    }
 }
