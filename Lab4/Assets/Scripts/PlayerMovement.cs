@@ -20,11 +20,14 @@ public class PlayerMovement : MonoBehaviour
     public GameObject rightLight;
 
     private CapsuleCollider cap;
+
+    private AudioSource jumpSound;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         cap = GetComponent<CapsuleCollider>();
+        jumpSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && jumpCount < 2){
             anim.SetTrigger("isJumping");
+            jumpSound.Play();
             rb.AddForce(new Vector2(rb.velocity.x,jump));
             jumpCount++;
             
