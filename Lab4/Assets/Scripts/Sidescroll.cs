@@ -32,5 +32,11 @@ public class Sidescroll : MonoBehaviour
             this.velocity.x = 0f;
             this.velocity.y = 3.5f;
         }
+
+        if (other.tag == "Horizontal")
+        {
+            this.velocity.x = 3.5f;
+            this.velocity.y = 0f;
+        }
     }
 }
