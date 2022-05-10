@@ -26,7 +26,7 @@ public class Lever : MonoBehaviour
         if (other.tag == "Player")
         {
             doorObject.Open();
-            Destroy(this);
+            gameObject.SetActive(false);
         }
     }
 

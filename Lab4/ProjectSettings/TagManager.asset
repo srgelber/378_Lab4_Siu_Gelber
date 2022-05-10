@@ -7,6 +7,7 @@ TagManager:
   - Boss Boundary
   - Vertical
   - Horizontal
+  - Angel
   layers:
   - Default
   - TransparentFX

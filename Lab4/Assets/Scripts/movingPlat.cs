@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Angel : MonoBehaviour
+public class movingPlat : MonoBehaviour
 {
     [SerializeField] private Vector3 velocity;
 
-    [SerializeField] private bool moving = true;
+    [SerializeField] private int direction = 0;
 
     void Start()
     {
@@ -21,15 +20,25 @@ public class Angel : MonoBehaviour
 
     private IEnumerator callChange()
     {
-        while(moving)
+        while(direction == 0)
         {
-            transform.Rotate(0f, 180f, 0f);
             moveLeft();
             yield return new WaitForSeconds(3);
             stop();
             yield return new WaitForSeconds(1);
-            transform.Rotate(0f, -180f, 0f);
             moveRight();
+            yield return new WaitForSeconds(3);
+            stop();
+            yield return new WaitForSeconds(1);
+        }
+
+        while(direction == 1)
+        {
+            moveRight();
+            yield return new WaitForSeconds(3);
+            stop();
+            yield return new WaitForSeconds(1);
+            moveLeft();
             yield return new WaitForSeconds(3);
             stop();
             yield return new WaitForSeconds(1);
@@ -38,7 +47,7 @@ public class Angel : MonoBehaviour
 
     void moveRight()
     {
-        velocity.x = 3;
+        velocity.x = 2;
     }
 
     void stop()
@@ -48,8 +57,7 @@ public class Angel : MonoBehaviour
 
     void moveLeft()
     {
-        velocity.x = -3;
+        velocity.x = -2;
     }
-
 
 }
