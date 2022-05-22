@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 22ac8d37bddd4724ebf547b6473b8d87
+guid: 763a5fb7c72c17b4c9101f759d9dbf03
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4836829601395863382
-    second: DemonBlobIdle (1)_0
+      213: -2862538863596969533
+    second: DemonBlobIdle_0
   - first:
-      213: -2911377282432619807
-    second: DemonBlobIdle (1)_1
+      213: 4973815162880553004
+    second: DemonBlobIdle_1
   - first:
-      213: -6527541309868626004
-    second: DemonBlobIdle (1)_2
+      213: -341831768837687130
+    second: DemonBlobIdle_2
   - first:
-      213: 3999996078482119337
-    second: DemonBlobIdle (1)_3
+      213: -2340171688404384778
+    second: DemonBlobIdle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DemonBlobIdle (1)_0
+      name: DemonBlobIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa094b9aa1120ecb0800000000000000
-      internalID: -4836829601395863382
+      spriteID: 3c16d87e1183648d0800000000000000
+      internalID: -2862538863596969533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DemonBlobIdle (1)_1
+      name: DemonBlobIdle_1
       rect:
         serializedVersion: 2
         x: 100
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ea267969c5b897d0800000000000000
-      internalID: -2911377282432619807
+      spriteID: c2072f9c98a860540800000000000000
+      internalID: 4973815162880553004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DemonBlobIdle (1)_2
+      name: DemonBlobIdle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cafa79853c38965a0800000000000000
-      internalID: -6527541309868626004
+      spriteID: 6a87c7d31d1914bf0800000000000000
+      internalID: -341831768837687130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DemonBlobIdle (1)_3
+      name: DemonBlobIdle_3
       rect:
         serializedVersion: 2
         x: 100
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aad1e09d37d28730800000000000000
-      internalID: 3999996078482119337
+      spriteID: 6f30b378f3a068fd0800000000000000
+      internalID: -2340171688404384778
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b41c7e4ecdb5ce243bdbd41812ac0c65
+    spriteID: 1cbc2c3469e0e7f48a02d8f986a58a09
     internalID: 0
     vertices: []
     indices: 
